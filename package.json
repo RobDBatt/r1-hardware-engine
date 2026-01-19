@@ -1,0 +1,59 @@
+{
+    "name": "r1-hardware-engine",
+    "displayName": "R1 Hardware Engine",
+    "description": "Local LLM Hardware Compatibility & Orchestration Engine for DeepSeek-R1",
+    "version": "0.1.0",
+    "publisher": "R1Hardware",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/RobDBatt/r1-hardware-engine.git"
+    },
+    "homepage": "https://github.com/RobDBatt/r1-hardware-engine#readme",
+    "engines": {
+        "vscode": "^1.75.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [],
+    "main": "./out/extension.js",
+    "contributes": {
+        "viewsContainers": {
+            "activitybar": [
+                {
+                    "id": "r1-engine-sidebar",
+                    "title": "R1 Engine",
+                    "icon": "$(circuit-board)"
+                }
+            ]
+        },
+        "views": {
+            "r1-engine-sidebar": [
+                {
+                    "id": "r1-hardware-dashboard",
+                    "name": "Hardware Dashboard"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "pretest": "npm run compile && npm run lint",
+        "lint": "eslint src --ext ts",
+        "test": "node ./out/test/runTest.js"
+    },
+    "devDependencies": {
+        "@types/node": "16.x",
+        "@types/vscode": "^1.75.0",
+        "@typescript-eslint/eslint-plugin": "^5.59.1",
+        "@typescript-eslint/parser": "^5.59.1",
+        "eslint": "^8.39.0",
+        "typescript": "^5.0.4"
+    },
+    "dependencies": {
+        "@modelcontextprotocol/sdk": "^1.25.2",
+        "@vscode/webview-ui-toolkit": "^1.4.0"
+    }
+}
