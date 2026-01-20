@@ -3,6 +3,7 @@
     "displayName": "R1 Hardware Engine",
     "description": "Local LLM Hardware Compatibility & Orchestration Engine for DeepSeek-R1",
     "version": "0.1.0",
+    "license": "GPL-3.0",
     "publisher": "R1Hardware",
     "repository": {
         "type": "git",
